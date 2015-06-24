@@ -22,6 +22,10 @@ app.use(stormpath.init(app, {
 
 app.get('/', stormpath.loginRequired);
 
+app.get('/', (req, res, next) => {
+  console.log(req.user);
+});
+
 // Static asset endpoints
 app.use(Express.static('./public'));
 
