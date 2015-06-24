@@ -20,6 +20,8 @@ app.use(stormpath.init(app, {
   application:  process.env.STORMPATH_URL,
 }));
 
+app.get('/', stormpath.loginRequired);
+
 // Static asset endpoints
 app.use(Express.static('./public'));
 
