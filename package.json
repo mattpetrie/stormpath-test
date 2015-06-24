@@ -1,0 +1,30 @@
+{
+  "name": "stormpath-test",
+  "version": "0.1.0",
+  "description": "Test of the Stormpath user management API",
+  "main": "index.js",
+  "engines": {
+    "iojs": "2.3.x",
+    "npm": "2.11.x"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mattpetrie/stormpath-test.git"
+  },
+  "author": "Matt Petrie",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mattpetrie/stormpath-test/issues"
+  },
+  "homepage": "https://github.com/mattpetrie/stormpath-test#readme",
+  "dependencies": {
+    "babel": "5.6.4",
+    "body-parser": "1.13.1",
+    "express": "4.13.0",
+    "morgan": "1.6.0"
+  }
+}
