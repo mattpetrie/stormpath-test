@@ -24,6 +24,7 @@ app.get('/', stormpath.loginRequired);
 
 app.get('/', (req, res, next) => {
   console.log(req.user);
+  next();
 });
 
 // Static asset endpoints
