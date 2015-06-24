@@ -1,6 +1,7 @@
 import Express from 'express';
 import Logger from 'morgan';
 import bodyParser from 'body-parser';
+import stormpath from 'express-stormpath';
 
 const app = new Express();
 
@@ -10,6 +11,13 @@ app.use(bodyParser.json({
   type: [
     'application/json',
   ]
+}));
+
+app.use(stormpath.init(app, {
+  apiKeyId:     process.env.STORMPATH_API_KEY_ID,
+  apiKeySecret: process.env.STORMPATH_API_KEY_SECRET,
+  secretKey:    process.env.STORMPATH_SECRET_KEY,
+  application:  process.env.STORMPATH_URL,
 }));
 
 // Static asset endpoints
